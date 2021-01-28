@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "The Joel Hilton Film Collection";
+}
+@model IEnumerable<HaileyHullingerAssignment3.Models.MovieResponse> 
+<div>
+    <h2>Here is a list of all the movies in the Joel Hilton Film Collection*</h2> <br />
+    <table>
+        <thead>
+            <tr><th>Category   </th><th>Title   </th><th>Director   </th><th>Rating   </th><th>Edited?   </th></tr>
+        </thead>
+
+        <tbody>
+            <!--for loop to go through and list all the movies in the model-->
+            @foreach (HaileyHullingerAssignment3.Models.MovieResponse x in Model)
+            {
+                <!--if statment to check if the movie's title is independence day. If the title is "Independence Day" it will not be shown the the models list.-->
+                @if (x.Title == "Independence Day")
+                {
+
+                }
+
+                else
+                {
+                    <tr>
+                        <td>@x.Category   </td>
+                        <td>@x.Title   </td>
+                        <td>@x.Director   </td>
+                        <td>@x.Rating   </td>
+                        <td>@x.Edited   </td>
+                    </tr>
+                }
+                
+            }
+
+
+
+
+        </tbody>
+    </table>
+    
+    
+    <p>
+        <i>
+            *The movie “Independence Day" is not included in this list
+            because Joel once argued in a 4
+            th of July podcast that “Independence Day” beats
+            “Rocky IV” as the “Most American Movie Ever Made” which is obviously not true!
+        </i>
+    </p>
+
+
+
+</div>
