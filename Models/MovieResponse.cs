@@ -14,5 +14,6 @@ namespace HaileyHullingerAssignment3.Models
         public string Director { get; set; }
         public string Rating { get; set; }
         public bool Edited { get; set; }
+        public string Year { get; set; }
     }
 }
